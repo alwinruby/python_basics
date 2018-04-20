@@ -43,3 +43,5 @@ grocery_list.reverse()
 print()
 print(to_do_list)
 print()
+to_do_list2 = other_events + grocery_list
+print(to_do_list2)
