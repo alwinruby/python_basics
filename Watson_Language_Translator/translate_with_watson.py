@@ -6,7 +6,7 @@ from local import USERNAME, PASSWORD
 def translate(text, source_language, target_language):
     # GET REQUEST
     url = "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
-    querystring = {"text":text,"model_id":"{0}-{1}-conversational".format(source_language, target_language)}
+    querystring = {"text":text,"model_id":"{0}-{1}".format(source_language, target_language)}
     response = requests.get(url,auth=(USERNAME, PASSWORD),params=querystring)
     return response.text
 
@@ -15,7 +15,7 @@ if __name__ == '__main__':
     text = input("In English what do you want to translate: ")
 
     print("Now which language?")
-    print("Enter (1) for Spanish")
+    print("Enter (1) Spanish")
     print("Enter (2) Arabic")
     print("Enter (3) French")
     print("Enter (4) Portuguese")
