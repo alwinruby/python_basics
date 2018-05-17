@@ -1,9 +1,4 @@
 # Use Python's inbuilt input() function to get the required data.
-# Create a seperate function to make the API call and return the data.
-# Create a function to calculate the arrival time.
-# arrival time = current time + duration, you can use timedelta for this.
-# Create a seperate function which takes all the data as the input and writes it to a html file.
-# Get the right address to enter by using Google's address auto complete
 
 import requests
 from datetime import datetime
@@ -37,3 +32,13 @@ if __name__ == "__main__":
         raise ValueError('The entered, is not vaild.')
 
     print("You are travelling by : " + mode_of_travel)
+
+
+# Create a seperate function to make the API call and return the data.
+
+def get_direction()
+
+# Create a function to calculate the arrival time.
+# arrival time = current time + duration, you can use timedelta for this.
+# Create a seperate function which takes all the data as the input and writes it to a html file.
+# Get the right address to enter by using Google's address auto complete
