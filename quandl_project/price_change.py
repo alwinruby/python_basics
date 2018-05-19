@@ -32,3 +32,10 @@ from local import API_KEY
 quandl.ApiConfig.api_key = API_KEY
 QUANDL_CODE = 'MSFT' #Quadl code of the equity you want to track - Microsoft
 EMAIL = 'alwinsolanky@gmail.com' # Your email
+
+
+if __name__ == '__main__':
+
+    quandl_equity_code = QUANDL_CODE
+    # data = quandl.get(quandl_equity_code, start_date='2018-03-23', end_date='2018-03-30')
+    data = quandl.get(quandl_equity_code,start_date='2017-01-01',end_date='2018-01-30')
