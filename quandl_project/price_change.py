@@ -22,11 +22,18 @@
 
 
 import quandl
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+# %matplotlib inline
+
+import plotly.offline as py
+import plotly.graph_objs as go
+import plotly.figure_factory as ff
+py.init_notebook_mode(connected=True)
+
 from datetime import datetime
 from datetime import timedelta
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
 from local import API_KEY
 
 quandl.ApiConfig.api_key = API_KEY
@@ -38,4 +45,5 @@ if __name__ == '__main__':
 
     quandl_equity_code = QUANDL_CODE
     # data = quandl.get(quandl_equity_code, start_date='2018-03-23', end_date='2018-03-30')
-    data = quandl.get(quandl_equity_code,start_date='2017-01-01',end_date='2018-01-30')
+    # data = quandl.get(quandl_equity_code, start_date='2017-01-01', end_date='2018-01-30')
+    data = quandl.get('EOD/AAPL', start_date='2017-02-05', end_date='2017-09-12')
